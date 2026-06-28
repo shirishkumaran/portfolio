@@ -1351,6 +1351,15 @@ textarea.form-input {
   word-wrap: break-word;
 }
 
+.flow-card-title-app {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--on-surface);
+  margin-bottom: 4px;
+  line-height: 1;
+  word-wrap: break-word;
+}
+
 .flow-card-desc {
   font-size: 10px;
   color: var(--on-surface-variant);
