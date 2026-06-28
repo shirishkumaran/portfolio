@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shirish T | Data Engineer Portfolio</title>
+  <meta name="description" content="Professional portfolio of Shirish T, a Data Engineer specializing in building scalable data pipelines, Databricks architecture, and cloud solutions.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Inline helper style for SVG icons to render perfectly */
+    .cert-icon-svg {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Shirish T</a>
+      <ul class="nav-links">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="btn btn-secondary trigger-schedule" style="padding: 8px 18px; border-radius: 12px; margin-left: 10px;">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-tagline">Architecting Data Flows</span>
+          <h1 class="hero-title text-gradient">Lumina Nexus</h1>
+          <p class="hero-subtitle">
+            A command center for scalable data platforms. Engineering highly efficient architectures that process high-volume, real-time streams with modern cloud technologies.
+          </p>
+          <div class="hero-actions">
+            <a href="#journey" class="btn btn-primary">Explore Journey</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <!-- Interactive SVG Pipeline Visualization -->
+          <div class="pipeline-svg-container">
+            <svg class="pipeline-svg" viewBox="0 0 400 400" width="100%" height="100%">
+              <!-- Definitions for gradients & glowing filters -->
+              <defs>
+                <linearGradient id="blue-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--primary)" />
+                  <stop offset="100%" stop-color="var(--secondary)" />
+                </linearGradient>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                  <stop offset="0%" stop-color="var(--primary)" />
+                  <feGaussianBlur stdDeviation="8" result="blur" />
+                  <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+              </defs>
+
+              <!-- Connection Lines (Pipeline Paths) -->
+              <path class="pipeline-path" d="M 50 100 L 150 150 M 50 200 L 150 200 M 50 300 L 150 250 M 150 150 L 250 200 M 150 200 L 250 200 M 150 250 L 250 200 M 250 200 L 350 200" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="3" />
+              <!-- Highlighted Paths overlay -->
+              <path class="pipeline-path" d="M 50 100 Q 100 120 150 150 T 250 200 T 350 200" fill="none" stroke="url(#blue-purple)" stroke-width="2" opacity="0.3" />
+              <path class="pipeline-path" d="M 50 200 L 150 200 L 250 200 L 350 200" fill="none" stroke="url(#blue-purple)" stroke-width="2" opacity="0.4" />
+              <path class="pipeline-path" d="M 50 300 Q 100 280 150 250 T 250 200 T 350 200" fill="none" stroke="url(#blue-purple)" stroke-width="2" opacity="0.3" />
+
+              <!-- Source Nodes -->
+              <circle class="pipeline-node-marker" cx="50" cy="100" r="10" fill="var(--surface-container-high)" stroke="var(--primary)" stroke-width="2" />
+              <text x="50" y="80" fill="var(--on-surface-variant)" font-size="10" font-family="Inter" text-anchor="middle">API</text>
+              
+              <circle class="pipeline-node-marker" cx="50" cy="200" r="10" fill="var(--surface-container-high)" stroke="var(--primary)" stroke-width="2" />
+              <text x="50" y="180" fill="var(--on-surface-variant)" font-size="10" font-family="Inter" text-anchor="middle">Kafka</text>
+
+              <circle class="pipeline-node-marker" cx="50" cy="300" r="10" fill="var(--surface-container-high)" stroke="var(--primary)" stroke-width="2" />
+              <text x="50" y="280" fill="var(--on-surface-variant)" font-size="10" font-family="Inter" text-anchor="middle">S3 Bucket</text>
+
+              <!-- Processing Nodes -->
+              <circle class="pipeline-node-marker" cx="150" cy="150" r="12" fill="var(--surface-container-highest)" stroke="url(#blue-purple)" stroke-width="2" />
+              <text x="150" y="130" fill="var(--on-surface-variant)" font-size="10" font-family="Inter" text-anchor="middle">Flink</text>
+
+              <circle class="pipeline-node-marker" cx="150" cy="250" r="12" fill="var(--surface-container-highest)" stroke="url(#blue-purple)" stroke-width="2" />
+              <text x="150" y="230" fill="var(--on-surface-variant)" font-size="10" font-family="Inter" text-anchor="middle">Spark</text>
+
+              <!-- Storage & Serving Nodes -->
+              <circle class="pipeline-node-marker" cx="250" cy="200" r="14" fill="var(--surface-container-highest)" stroke="var(--secondary)" stroke-width="2" />
+              <text x="250" y="175" fill="var(--on-surface-variant)" font-size="10" font-family="Inter" text-anchor="middle">Delta Lake</text>
+
+              <circle class="pipeline-node-marker" cx="350" cy="200" r="16" fill="var(--surface-container-highest)" stroke="url(#blue-purple)" stroke-width="2" />
+              <text x="350" y="175" fill="var(--on-surface)" font-size="11" font-family="Inter" font-weight="bold" text-anchor="middle">Snowflake</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Journey Section -->
+  <section id="journey" class="journey-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Experience & Academics</span>
+        <h2 class="text-gradient">Career Journey</h2>
+        <p style="margin-top: 16px; font-size: 18px; color: var(--on-surface-variant);">
+          Engineering scalable data pipelines and architecting robust computer systems. From academic foundations to industrial-scale data solutions.
+        </p>
+      </div>
+
+      <div class="timeline-layout">
+        <!-- Left: Timeline Content -->
+        <div class="timeline-container">
+          <div class="timeline-progress-line" style="height: calc(100% - 40px);"></div>
+
+          <!-- Timeline Item 1: Data Engineer -->
+          <div class="timeline-item">
+            <div class="timeline-node pulse"></div>
+            <div class="glass glow-card timeline-content-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Data Engineer</h3>
+                  <span class="company-info">Agilisium Solutions • Current</span>
+                </div>
+                <span class="badge">Full Time</span>
+              </div>
+              <p class="timeline-body">
+                Orchestrating large-scale data transformation workflows and maintaining mission-critical analytics infrastructure. Leading the migration of legacy ETL processes to modern, scalable lakehouse architectures.
+              </p>
+
+              <!-- Sub Project Grid -->
+              <div class="sub-projects-grid">
+                <div class="sub-project-card">
+                  <div class="sub-project-title">Databricks Architecture</div>
+                  <p class="sub-project-desc">Managing Delta Lake implementations and optimizing Spark compute clusters for cost-efficiency.</p>
+                </div>
+                <div class="sub-project-card">
+                  <div class="sub-project-title">Postman & API Design</div>
+                  <p class="sub-project-desc">Automating data ingestion from RESTful APIs and building robust integration test suites.</p>
+                </div>
+              </div>
+
+              <!-- Tech stack chips -->
+              <div class="tech-tags">
+                <span class="tag">PySpark</span>
+                <span class="tag">Databricks</span>
+                <span class="tag">Postman</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Course in Great Learning -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="glass glow-card timeline-content-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Post Graduate in Data Science</h3>
+                  <span class="company-info">Great Learning • 2024</span>
+                </div>
+                <span class="badge badge-secondary">Course</span>
+              </div>
+              <p class="timeline-body">
+                Completed a comprehensive Data Science program at Great Learning, gaining hands-on experience in SQL, Python, data analysis, machine learning, and statistical modeling. Worked on real-world datasets to perform data cleaning, exploratory data analysis (EDA), feature engineering, predictive modeling, and model evaluation using algorithms such as Random Forest and XGBoost.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Bachelor's in CS -->
+          <div class="timeline-item">
+            <div class="timeline-node"></div>
+            <div class="glass glow-card timeline-content-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Bachelor's in Computer Science</h3>
+                  <span class="company-info">SRM University • 2020 - 2024</span>
+                </div>
+                <span class="badge badge-secondary">GPA: 8.67</span>
+              </div>
+              <p class="timeline-body">
+                Focused on Distributed Systems, Algorithm Analysis, and Database Management Systems.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Sidebar Certs and Call to Action -->
+        <div class="sidebar-container">
+          <!-- Professional Certifications Card -->
+          <div class="glass certs-card">
+            <h3 class="sidebar-title">Professional Certs</h3>
+            <div class="certs-list">
+              <!-- Cert 1: Databricks Associate -->
+              <div class="cert-item">
+                <svg class="cert-icon-svg" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+                <div class="cert-details">
+                  <div class="cert-name">Databricks Associate</div>
+                  <div class="cert-issuer">Databricks</div>
+                  <div class="cert-date">ISSUED MAY 2026</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schedule a Call CTA Box -->
+          <div class="glass cta-sidebar-card">
+            <h3 class="cta-sidebar-title">Let's build together</h3>
+            <p class="cta-sidebar-desc">
+              Always looking for challenging data problems and architectural opportunities.
+            </p>
+            <a href="#" class="cta-sidebar-link trigger-schedule">
+              Schedule a Call 
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3.33331 8H12.6666" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 3.33331L12.6667 7.99998L8 12.6666" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Portfolio Showcases</span>
+        <h2 class="text-gradient">Featured Case Studies</h2>
+      </div>
+
+      <div class="projects-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+        <!-- Project 1 -->
+        <div class="glass glow-card project-card">
+          <div>
+            <div class="project-header">
+              <span class="badge badge-secondary">Real-Time Streams</span>
+              <span style="color: var(--on-surface-variant); font-size: 13px;">Q2 2026</span>
+            </div>
+            <h3 class="project-title">Real-Time Ingestion Pipeline</h3>
+            <p class="project-desc">
+              Designed and implemented a real-time data pipeline that ingests application data into a Landing layer, processes and transforms it in the Staging layer, and delivers curated datasets to the Gold layer for powering interactive dashboards and business intelligence reporting.
+            </p>
+          </div>
+          <div class="project-footer">
+            <div class="project-metrics">
+              <div class="metric-item">
+                <span class="metric-value">100k +</span>
+                <span class="metric-label">Records / Day</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">Databricks</span>
+                <span class="metric-label">Infrastructure</span>
+              </div>
+            </div>
+            <a href="#" class="project-arrow-link">
+              Read Deep-Dive
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3.33331 8H12.6666" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 3.33331L12.6667 7.99998L8 12.6666" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack / Skills Section -->
+  <section id="stack" class="stack-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Technical Competencies</span>
+        <h2 class="text-gradient">Engineered Stack</h2>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="stack-filter-container">
+        <button class="filter-chip active" data-filter="all">All Tech</button>
+        <button class="filter-chip" data-filter="languages">Languages</button>
+        <button class="filter-chip" data-filter="data">Big Data & Storage</button>
+        <button class="filter-chip" data-filter="ops">Orchestration & DevOps</button>
+      </div>
+
+      <!-- Stack Grid -->
+      <div class="stack-grid">
+        <!-- Python -->
+        <div class="stack-card" data-category="languages">
+          <div class="stack-card-icon">🐍</div>
+          <div class="stack-card-name">Python</div>
+          <div class="stack-card-category">Languages</div>
+        </div>
+        <!-- SQL -->
+        <div class="stack-card" data-category="languages">
+          <div class="stack-card-icon">🗄️</div>
+          <div class="stack-card-name">SQL</div>
+          <div class="stack-card-category">Languages</div>
+        </div>
+        <!-- PySpark -->
+        <div class="stack-card" data-category="data">
+          <div class="stack-card-icon">⚡</div>
+          <div class="stack-card-name">PySpark</div>
+          <div class="stack-card-category">Big Data</div>
+        </div>
+        <!-- Databricks -->
+        <div class="stack-card" data-category="data">
+          <div class="stack-card-icon">🧱</div>
+          <div class="stack-card-name">Databricks</div>
+          <div class="stack-card-category">Big Data</div>
+        </div>
+        <!-- Postman -->
+        <div class="stack-card" data-category="ops">
+          <div class="stack-card-icon">📬</div>
+          <div class="stack-card-name">Postman</div>
+          <div class="stack-card-category">DevOps</div>
+        </div>
+        <!-- Power BI -->
+        <div class="stack-card" data-category="data">
+          <div class="stack-card-icon">📈</div>
+          <div class="stack-card-name">Power BI</div>
+          <div class="stack-card-category">Big Data</div>
+        </div>
+        <!-- Snowflake -->
+        <div class="stack-card" data-category="data">
+          <div class="stack-card-icon">❄️</div>
+          <div class="stack-card-name">Snowflake</div>
+          <div class="stack-card-category">Big Data</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Contact Info -->
+        <div class="contact-info-panel">
+          <div>
+            <span class="section-subtitle">Get in Touch</span>
+            <h2 class="text-gradient" style="margin-bottom: 16px;">Start a Conversation</h2>
+            <p>
+              I am open to contract engagements, architectural consultations, and full-time opportunities in high-growth engineering teams.
+            </p>
+          </div>
+
+          <div class="contact-methods" style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="contact-method">
+              <div class="contact-icon">📧</div>
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">shirisht2707@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-label">Location</div>
+                <div class="contact-value">Chennai, India</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass contact-card">
+          <form action="#" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+            <div class="form-group">
+              <label class="form-label" for="name">Your Name</label>
+              <input class="form-input" type="text" id="name" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input class="form-input" type="email" id="email" required placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-input" id="message" required placeholder="Describe your data challenges or opportunity..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Secure Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-copy">
+        <strong>Shirish T</strong><br>
+        <span style="font-size: 13px; color: var(--on-surface-variant);">© 2024 Shirish T. Built with precision.</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#contact">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Schedule Call Modal Dialog Overlay -->
+  <div class="modal-overlay" id="schedule-modal">
+    <div class="glass modal-content">
+      <button class="modal-close" aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <h3 style="margin-bottom: 16px;" class="text-gradient">Book a Technical Call</h3>
+      <p style="font-size: 14px; margin-bottom: 24px;">
+        Select a date and time for a 30-minute introductory architecture call.
+      </p>
+
+      <form action="#" onsubmit="event.preventDefault(); alert('Call booked successfully! Calendar invite sent.'); document.getElementById('schedule-modal').classList.remove('active'); document.body.style.overflow='';">
+        <div class="form-group">
+          <label class="form-label" for="call-date">Preferred Date</label>
+          <input class="form-input" type="date" id="call-date" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="call-time">Preferred Time (EST)</label>
+          <select class="form-input" id="call-time" required>
+            <option value="">Choose a slot...</option>
+            <option value="09:00">09:00 AM</option>
+            <option value="11:30">11:30 AM</option>
+            <option value="14:00">02:00 PM</option>
+            <option value="16:30">04:30 PM</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Slot</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
